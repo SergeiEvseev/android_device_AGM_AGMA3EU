@@ -237,21 +237,18 @@ case "$target" in
                        "Surf")
                             case "$platform_subtype_id" in
                                  "1" | "2")
-                                      setprop qemu.hw.mainkeys 0
                                       ;;
                             esac
                             ;;
                        "MTP")
                             case "$platform_subtype_id" in
                                  "3")
-                                      setprop qemu.hw.mainkeys 0
                                       ;;
                             esac
                             ;;
                        "QRD")
                             case "$platform_subtype_id" in
                                  "0" | "64")
-                                      setprop qemu.hw.mainkeys 0
                                       ;;
                             esac
                             ;;
@@ -288,5 +285,3 @@ chmod 770 /data/misc/radio/modem_config
 cp -r /firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/mbn_ota/* /data/misc/radio/modem_config
 chown -hR radio.radio /data/misc/radio/modem_config
 echo 1 > /data/misc/radio/copy_complete
-#add by zhangnaifeng for cdrom
-mount -o ro,loop -t iso9660 /system/mobile_toolkit/Driver.iso /mnt/cd-rom

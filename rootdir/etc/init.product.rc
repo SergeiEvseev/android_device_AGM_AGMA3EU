@@ -1,8 +1,0 @@
-# For fingerprint, by wangxuguang
-service fpcd /system/bin/fpcd
-    class main
-    socket fpcd stream 0660 system system
-
-service alipayservice /system/bin/alipayservice
-    class main
-
